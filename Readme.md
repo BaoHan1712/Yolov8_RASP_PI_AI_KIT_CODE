@@ -56,8 +56,8 @@ python basic_pipelines/instance_segmentation.py --input video.mp4
 ## 🏗 Kiến trúc tổng quan
 ```mermaid
 flowchart LR
-  A[Camera/Cụm video] -->|Frame| B[Preprocessing & Resize]
-  B --> C[YOLO Detection (main_2cls)]
+  A[Camera/Cụm video] -->|Frame| B[Preprocessing & Resize]
+  B --> C[YOLO Detection main_2cls]
   C --> D[Filter & Sort Tracker]
   D --> E[Calculator Offset & Direction]
   E --> F[Gửi UART → STM32]
@@ -66,11 +66,10 @@ flowchart LR
   subgraph GStreamer_Pipelines
     H[basic_pipelines/detection.py] --> I[Hailo Detection]
     I --> J[Process detections no-track]
-    J --> K[Visualize & (gửi STM32)]
+    J --> K[Visualize & gửi STM32]
     L[basic_pipelines/instance_segmentation.py] --> M[Hailo Instance Segmentation]
     M --> N[Overlay mask lên frame]
   end
-
 ```
 
 ---
@@ -200,7 +199,7 @@ python basic_pipelines/instance_segmentation.py --input video.mp4
 ```mermaid
 flowchart LR
   A[Camera/Video source] -->|Frame| B[Preprocessing & Resize]
-  B --> C[YOLO Detection (main_2cls)]
+  B --> C[YOLO Detection main_2cls]
   C --> D[Filter & Sort Tracker]
   D --> E[Calculator Offset & Direction]
   E --> F[Send UART → STM32]
@@ -209,7 +208,7 @@ flowchart LR
   subgraph GStreamer_Pipelines
     H[basic_pipelines/detection.py] --> I[Hailo Detection]
     I --> J[Process detections no-track]
-    J --> K[Visualize & (send to STM32)]
+    J --> K[Visualize & send to STM32]
     L[basic_pipelines/instance_segmentation.py] --> M[Hailo Instance Segmentation]
     M --> N[Overlay mask on frame]
   end
