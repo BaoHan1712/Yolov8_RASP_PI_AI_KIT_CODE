@@ -1,5 +1,10 @@
 <marquee behavior="scroll" direction="left">🚀 **Hệ Thống Phát Hiện & Theo Dõi Vật Thể** 🚀</marquee>
 
+> **LANGUAGE SWITCH**: Click on the language you prefer:
+> <a href="#-hệ-thống-phát-hiện--theo-dõi-vật-thể">🇻🇳 Tiếng Việt</a> | 
+> <a href="#-english-version-">🇬🇧 English</a>
+
+
 # 📖 Hệ Thống Phát Hiện & Theo Dõi Vật Thể
 
 > **Mô tả**: Đây là một bộ pipeline bao gồm nhiều module, sử dụng YOLO, GStreamer với Hailo, Sort tracker và giao tiếp đến STM32 để phát hiện, theo dõi và điều khiển hướng di chuyển dựa trên camera và cảm biến.
@@ -278,6 +283,3 @@ pytest tests/test_edge_cases.py
 > ![Pipeline Animation](docs/pipeline_animation.gif)
 > ```
 
-> **LANGUAGE SWITCH**: Click on the language you prefer:
-> <a href="#-hệ-thống-phát-hiện--theo-dõi-vật-thể">🇻🇳 Tiếng Việt</a> | 
-> <a href="#-english-version-">🇬🇧 English</a>
